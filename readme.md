@@ -126,3 +126,9 @@ Abra o Prompt de Comando (CMD) e execute o comando abaixo (tudo em uma única li
 ```
 docker run -p 8080:8080 --name keycloak -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin123 -v "/c/Users/Projetos/kc-smv-provider-infobip/target/kc-smv-provider-infobip-1.0-SNAPSHOT.jar:/opt/keycloak/providers/kc-smv-provider-infobip-1.0-snapshot.jar" quay.io/keycloak/keycloak:latest start-dev
 ```
+
+Com volume:
+
+```
+docker run -p 8080:8080 --name keycloak -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin123 -v "/c/Users/Projetos/kc-smv-provider-infobip/target/kc-smv-provider-infobip-1.0-SNAPSHOT.jar:/opt/keycloak/providers/kc-smv-provider-infobip-1.0-snapshot.jar" -v "/c/Users/Projetos/kc-smv-provider-infobip/src/themes:/opt/keycloak/themes/base" quay.io/keycloak/keycloak:latest start-dev
+```
