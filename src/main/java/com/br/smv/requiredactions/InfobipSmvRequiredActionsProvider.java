@@ -26,6 +26,7 @@ public class InfobipSmvRequiredActionsProvider implements RequiredActionProvider
     @Override
     public void requiredActionChallenge(RequiredActionContext context) {
         // Exibe um formulário sem necessidade de input do usuário.
+        System.out.println(context);
         context.challenge(context.form().createForm("infobip-smv-challenge"));
     }
 
